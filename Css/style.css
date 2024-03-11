@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Madimi One', sans-serif;
+    background-color: #000000; /* Warna latar belakang gelap */
+    color: #fff; /* Warna teks putih */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    float: left;
+    font-size: 24px;
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #67c5ff; /* Warna teks saat dihover */
+}
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #ccc;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #333; /* Warna latar belakang footer */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 50%;
+    height: auto;
+}
+

@@ -17,6 +17,7 @@
             <h1>Landing Page</h1>
             <nav>
                 <a href="EditJs.html">Js Example</a>
+                <a href="landingpagedom.html">Js DOM Landing Page</a>
                 <a href="Form.html">Form</a>
             </nav>
         </div>
@@ -28,8 +29,7 @@
             <div class="slider">
                 <div class="slides">
                     <img src="images/1.jpg" alt="Image 1">
-                    <img src="images/2.jpg" alt="Image 2">
-                    <img src="images/3.jpg" alt="Image 3">
+
                 </div>
             </div>
             <p>'w'</p>
@@ -37,25 +37,7 @@
     </section>
   
   <script>
-    const slides = document.querySelector('.slides');
-    const images = document.querySelectorAll('.slides img');
-
-    let counter = 1;
-    const slideWidth = images[0].clientWidth;
-
-    setInterval(() => {
-        slides.style.transition = 'transform 0.5s ease-in-out';
-        slides.style.transform = `translateX(${-slideWidth * counter}px)`;
-        counter++;
-
-        if (counter === images.length) {
-            setTimeout(() => {
-                slides.style.transition = 'none';
-                counter = 1;
-                slides.style.transform = `translateX(0px)`;
-            }, 500);
-        }
-    }, 2000);
+   
   </script>
 </body>
 </html>

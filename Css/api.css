@@ -1,0 +1,53 @@
+body {
+    background-color: #1f1f1f; 
+    color: #ffffff; 
+    font-family: 'Madimi One', sans-serif;
+}
+
+input[type="text"], button {
+    background-color: #333333; 
+    color: #ffffff; 
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #aaaaaa;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555555; 
+}
+
+img {
+    max-width: 200px; 
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#pokemonInfo {
+    margin-top: 20px;
+}
+
+#pokemonInfo h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}

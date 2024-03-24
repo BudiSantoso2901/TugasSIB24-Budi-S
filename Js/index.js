@@ -1,7 +1,7 @@
+let searchHistory = []; 
+
 async function fetchData(){
-
     try{
-
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
@@ -36,8 +36,44 @@ async function fetchData(){
 
         const pokemonInfoDiv = document.getElementById("pokemonInfo");
         pokemonInfoDiv.style.display = "block";
+
+        // Menambahkan pencarian ke dalam riwayat
+        if (!searchHistory.includes(pokemonName)) {
+            searchHistory.push(pokemonName);
+            renderSearchHistory();
+        }
     }
     catch(error){
         console.error(error);
     }
+}
+
+function renderSearchHistory() {
+    const historyContainer = document.getElementById("searchHistory");
+    historyContainer.innerHTML = "";
+    searchHistory.forEach(pokemon => {
+        const historyItem = document.createElement("div");
+        historyItem.classList.add("history-card");
+        historyItem.innerHTML = `
+        <div class="card" style="background-color: #333333; color: #aaaaaa; margin-bottom: 10px;">
+        <div class="card-body">
+            <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none">
+            <div id="pokemonInfo" style="display: none;">
+                <h2 id="pokemonNameDisplay"></h2>
+                <h3>Stats:</h3>
+                <ul id="pokemonStats"></ul>
+                <h3>Type:</h3>
+                <ul id="pokemonTypes"></ul>
+            </div>
+            <button class="btn btn-primary" onclick="fetchPokemon('${pokemon}')">View</button>
+        </div>
+    </div>
+        `;
+        historyContainer.appendChild(historyItem);
+    });
+}
+
+function fetchPokemon(pokemon) {
+    document.getElementById("pokemonName").value = pokemon;
+    fetchData();
 }

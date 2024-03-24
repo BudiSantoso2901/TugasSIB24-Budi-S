@@ -51,3 +51,39 @@ ul {
 ul li {
     margin-bottom: 5px;
 }
+.history-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.history-card {
+    width: calc(33.33% - 10px); /* Mengatur lebar kartu agar ada tiga di baris */
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: justify;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 992px) {
+    .history-card {
+        width: calc(50% - 10px); /* Mengatur lebar kartu agar ada dua di baris pada layar kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .history-card {
+        width: calc(100% - 10px); /* Mengatur lebar kartu agar satu di baris pada layar sangat kecil */
+    }
+}
